@@ -8,6 +8,8 @@ const refs = {
 
   gallery: document.querySelector('.gallery'),
   loadMoreBtn: document.querySelector('[data-action="load-more"]'),
+
+  spinner: document.querySelector('#spinner'),
 };
 
 export default refs;

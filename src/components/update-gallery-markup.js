@@ -1,12 +1,21 @@
 import imageTpl from '../templates/imageCard.hbs';
 import refs from '../utils/refs.js';
 
+import { success } from '@pnotify/core/dist/PNotify.js';
+import '../utils/notification.js';
+
 function updateGalleryMarkup(hits) {
   const markup = imageTpl(hits);
   refs.gallery.insertAdjacentHTML('beforeend', markup);
 
-  refs.loadMoreBtn.classList.remove('hidden');
-  refs.loadMoreBtn.classList.add('show');
+  // let tags = [];
+  // hits.forEach(i => tags.push(i.tags));
+  // console.log(tags);
+
+  success({
+    title: 'We found photos with such tags: ',
+    text: `${hits[0].tags}`,
+  });
 }
 
 export default updateGalleryMarkup;
