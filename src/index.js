@@ -42,10 +42,6 @@ function fetchPhotos() {
 }
 
 refs.gallery.addEventListener('click', event => {
-  console.log(event.target.dataset.large);
-
-  console.log(event.target.nodeName);
-
   if (event.target.nodeName !== 'IMG') {
     return;
   } else {
