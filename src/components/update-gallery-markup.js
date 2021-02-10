@@ -13,7 +13,7 @@ function updateGalleryMarkup(hits) {
   // console.log(tags);
 
   success({
-    title: 'We found photos with such tags: ',
+    title: 'We found such photos: ',
     text: `${hits[0].tags}`,
   });
 }
